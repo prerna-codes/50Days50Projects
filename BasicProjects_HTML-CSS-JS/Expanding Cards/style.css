@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?Muli&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Muli', sans-serif;
+    margin: 0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+   min-height:  100vh;
+    overflow:hidden;
+   
+}
+.container{
+    display: flex;
+    width: 90vw;
+}
+.pannel{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    flex: 0.5;
+    position: relative;
+    transition: flex 0.5s ease-in;
+    color: #fff;
+    cursor: pointer;
+}
+.pannel h3{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    opacity: 0; /* Opacity is used to hide other h3 heading which are at buttom*/
+}
+.pannel.active{
+    flex: 5;
+}
+.pannel.active h3{
+   opacity: 1;
+   transition: opacity 0.5s ease-in 0.5s;
+}
+@media(max-width:480px){
+    .container{
+        width: 100vw;
+    }
+    .pannel:nth-of-type(4),.pannel:nth-of-type(5){
+        display: none;
+    }
+
+}

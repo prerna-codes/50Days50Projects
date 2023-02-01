@@ -1,0 +1,2 @@
+console.log("hello js");
+hey i really love what you are building and really passinate about the space. I will really love to talk about some possible internship or job ouuurtunity in your compNay and this is the stuff i worked in the past

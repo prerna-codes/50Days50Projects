@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+:root{
+    --left-bg-color:rgb(87, 84,236, 0.7);
+    --right-bg-color:rgba(43,43,43,0.8);
+    --left-hover-color:rgb(87, 84,236, 1);
+    --right-hover-color:rgba(28,122,28,1);
+}
+*{
+    box-sizing: border-box;
+}
+ 
+body{
+    font-family: 'Roboto',sans-serif;
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.container{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: #333;
+}
+
+.split{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.split.left{
+    
+    left:0;
+    background: url('ps.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.split.right{
+    right: 0;
+    background: url('xbox.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* Playstation and XBox i.e heading  */
+h1{
+   color: #fff;
+   font-size: 3.5rem;
+   position: absolute;
+   top: 20%;
+   left: 50%;
+   transform: translateX(-50%);
+   white-space: nowrap;
+
+} 
+/*"::before" Insert some text before the content of each <p> element */
+/* ovelay with blue(violet) color ...bg-color */
+.split.left::before {
+    content:'';
+    position: absolute;
+    width:100%;
+    height:100%;
+    background-color: var(--left-bg-color) ;
+
+}
+
+.split.rightt::before {
+    content:'';
+    position: absolute;
+    width:100%;
+    height:100%;
+    background-color: var(--right-bg-color) ;
+}
+
+.btn{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    border: 2px solid white;
+    padding: 15px;
+    position: absolute;
+    width: 15rem;
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.split.left.btn:hover{
+    background-color: var(--left-hover-color);
+    border-color: var(--left-hover-color);
+}
+.split.right.btn:hover{
+    background-color: var(--right-hover-color);
+    border-color: var(--right-hover-color);
+}
+
+@media(max-width:800px){
+    h1{
+        font-size: 2rem;
+        top: 30%;
+    }
+    .btn{
+        padding: 1rem;
+        width: 10rem;
+    }
+}
